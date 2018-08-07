@@ -4,7 +4,8 @@
   },
   "manifest_version": 2,
   "name": "PolyDorms",
-  "description": "Drag and drop Cal Poly dorm names.",
+  "authors": ["Justin Mo", "Josiah Pang"],
+  "description": "C/P CP dorm names.",
   "version": "1.0",
   "browser_action": {
    "default_icon": "icon.png",
