@@ -1,0 +1,12 @@
+button {
+    z-index: 1;
+}
+
+.noselect {
+    z-index: -1;
+    position: relative;
+}
+
+button {
+    text-align:center;
+}

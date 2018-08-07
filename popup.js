@@ -1,13 +1,63 @@
-const button = document.querySelector("button");
-
-button.onclick = function() {
-  console.log("clicked");
-  navigator.clipboard.writeText('Text to be copied')
-  .then(() => {
-    console.log('Text copied to clipboard');
-  })
-  .catch(err => {
-    // This can happen if the user denies clipboard permissions:
-    console.error('Could not copy text: ', err);
-  });
+function copy(text){
+    if (text == "elewexe") {
+        document.getElementById("textelewexe").select();
+        document.execCommand("Copy", false, null);
+    }
+    else if (text == "nipumūʔ") {
+        document.getElementById("textnip").select();
+        document.execCommand("Copy", false, null);
+    }
+    else if (text == "tiłhini") {
+        document.getElementById("textti").select();
+        document.execCommand("Copy", false, null);
+    }
+    else if (text == "tsʰɨtqawɨ") {
+        document.getElementById("textts").select();
+        document.execCommand("Copy", false, null);
+    }
+    else if (text == "tšɨłkukunɨtš") {
+        document.getElementById("textt").select();
+        document.execCommand("Copy", false, null);
+    }
+    else if (text == "tsɨpxatu") {
+        document.getElementById("texttsp").select();
+        document.execCommand("Copy", false, null);
+    }
+    else if (text == "tsɨtkawayu") {
+        document.getElementById("texttst").select();
+        document.execCommand("Copy", false, null);
+    }
 }
+
+//Add Event Listeners to Button Click
+document.addEventListener("DOMContentLoaded", function () {
+    var copyelewexe = document.getElementById('copyelewexe');
+    var copynip = document.getElementById('copynip');
+    var copyti = document.getElementById('copyti');
+    var copyts = document.getElementById('copyts');
+    var copyt = document.getElementById('copyt');
+    var copytsp = document.getElementById('copytsp');
+    var copytst = document.getElementById('copytst');
+
+    copyelewexe.addEventListener('click', function() {
+        copy('elewexe');
+    });
+    copynip.addEventListener('click', function() {
+        copy('nipumūʔ');
+    });
+    copyti.addEventListener('click', function() {
+        copy('tiłhini');
+    });
+    copyts.addEventListener('click', function() {
+        copy('tsʰɨtqawɨ');
+    });
+    copyt.addEventListener('click', function() {
+        copy('tšɨłkukunɨtš');
+    });
+    copytsp.addEventListener('click', function() {
+        copy('tsɨpxatu');
+    });
+    copytst.addEventListener('click', function() {
+        copy('tsɨtkawayu');
+    });
+});
