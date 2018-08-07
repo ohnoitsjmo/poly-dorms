@@ -1,4 +1,8 @@
 function copy(text){
+    if (text == "yakʔitʸutʸu") {
+        document.getElementById("textyak").select();
+        document.execCommand("Copy", false, null);
+    }
     if (text == "elewexe") {
         document.getElementById("textelewexe").select();
         document.execCommand("Copy", false, null);
@@ -31,6 +35,7 @@ function copy(text){
 
 //Add Event Listeners to Button Click
 document.addEventListener("DOMContentLoaded", function () {
+    var copyyak = document.getElementById('copyyak');
     var copyelewexe = document.getElementById('copyelewexe');
     var copynip = document.getElementById('copynip');
     var copyti = document.getElementById('copyti');
@@ -39,6 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var copytsp = document.getElementById('copytsp');
     var copytst = document.getElementById('copytst');
 
+    copyyak.addEventListener('click', function() {
+        copy('yakʔitʸutʸu');
+    });
     copyelewexe.addEventListener('click', function() {
         copy('elewexe');
     });
