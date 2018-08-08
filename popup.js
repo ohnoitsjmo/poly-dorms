@@ -183,6 +183,8 @@ document.addEventListener("DOMContentLoaded", function () {
         myAudio.play();
         playArray = [0, 0, 0, 0, 0, 0, 0, 0];
         var sheet = document.createElement('style');
+        var element = document.getElementById("stars");
+        element.classList.remove("hidden");    
         sheet.innerHTML = ".stars {display:block;}";
         document.body.appendChild(sheet);
         setTimeout(easterEgg, 600);
