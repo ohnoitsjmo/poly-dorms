@@ -16,34 +16,6 @@
  */
 
 // Copies the correct text
-function copy(text){
-    if (text == "yakʔitʸutʸu") {
-        document.getElementById("text-a").select();
-    }
-    else if (text == "elewexe") {
-        document.getElementById("text-b").select();
-    }
-    else if (text == "nipumūʔ") {
-        document.getElementById("text-c").select();
-    }
-    else if (text == "tiłhini") {
-        document.getElementById("text-d").select();
-    }
-    else if (text == "tsʰɨtqawɨ") {
-        document.getElementById("text-e").select();
-    }
-    else if (text == "tšɨłkukunɨtš") {
-        document.getElementById("text-f").select();
-    }
-    else if (text == "tsɨpxatu") {
-        document.getElementById("text-g").select();
-    }
-    else if (text == "tsɨtkawayu") {
-        document.getElementById("text-h").select();
-    }
-    document.execCommand("Copy", false, null);
-}
-
 function copyText(text) {
     navigator.clipboard.writeText(text)
         .then(() => {
