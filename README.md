@@ -1,6 +1,6 @@
 # Poly Dorms
 ## A Chrome extension for communicating Cal Poly's new dorms
-### Authors: Justin Mo & Josiah Pang
+### Developers: Justin Mo & Josiah Pang
 
 Note: We are in no way affiliated with Cal Poly University Housing
 
