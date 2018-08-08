@@ -1,87 +1,106 @@
+/* polyDorms: A Chrome Extension for managing Cal Poly's new dorm names...
+ * Developed by Justin Mo & Josiah Pang, Summer 2018
+ * Source: https://github.com/ohnoitsjmo/polyDorms
+ * Copyright (C) 2018-present
+ * 
+ * Note: We are in no way affiliated with Cal Poly University Housing
+ * 
+ * A: yakʔitʸutʸu
+ * B: elewexe
+ * C: nipumūʔ
+ * D: tiłhini
+ * E: tsʰɨtqawɨ
+ * F: tšɨłkukunɨtš
+ * G: tsɨpxatu
+ * H: tsɨtkawayu
+ */
+
+// Copies the correct text
 function copy(text){
     if (text == "yakʔitʸutʸu") {
-        document.getElementById("textyak").select();
-        document.execCommand("Copy", false, null);
+        document.getElementById("text-a").select();
     }
-    if (text == "elewexe") {
-        document.getElementById("textelewexe").select();
-        document.execCommand("Copy", false, null);
+    else if (text == "elewexe") {
+        document.getElementById("text-b").select();
     }
     else if (text == "nipumūʔ") {
-        document.getElementById("textnip").select();
-        document.execCommand("Copy", false, null);
+        document.getElementById("text-c").select();
     }
     else if (text == "tiłhini") {
-        document.getElementById("textti").select();
-        document.execCommand("Copy", false, null);
+        document.getElementById("text-d").select();
     }
     else if (text == "tsʰɨtqawɨ") {
-        document.getElementById("textts").select();
-        document.execCommand("Copy", false, null);
+        document.getElementById("text-e").select();
     }
     else if (text == "tšɨłkukunɨtš") {
-        document.getElementById("textt").select();
-        document.execCommand("Copy", false, null);
+        document.getElementById("text-f").select();
     }
     else if (text == "tsɨpxatu") {
-        document.getElementById("texttsp").select();
-        document.execCommand("Copy", false, null);
+        document.getElementById("text-g").select();
     }
     else if (text == "tsɨtkawayu") {
-        document.getElementById("texttst").select();
-        document.execCommand("Copy", false, null);
+        document.getElementById("text-h").select();
     }
+    document.execCommand("Copy", false, null);
 }
 
 //Add Event Listeners to Button Click
 document.addEventListener("DOMContentLoaded", function () {
-    var copyyak = document.getElementById('copyyak');
-    var copyelewexe = document.getElementById('copyelewexe');
-    var copynip = document.getElementById('copynip');
-    var copyti = document.getElementById('copyti');
-    var copyts = document.getElementById('copyts');
-    var copyt = document.getElementById('copyt');
-    var copytsp = document.getElementById('copytsp');
-    var copytst = document.getElementById('copytst');
+    var eventA = document.getElementById('copy-a');
+    var eventB = document.getElementById('copy-b');
+    var eventC = document.getElementById('copy-c');
+    var eventD = document.getElementById('copy-d');
+    var eventE = document.getElementById('copy-e');
+    var eventF = document.getElementById('copy-f');
+    var eventG = document.getElementById('copy-g');
+    var eventH = document.getElementById('copy-h');
 
-    copyyak.addEventListener('click', function() {
+    var playA = document.getElementById('play-a');
+
+    eventA.addEventListener('click', function() {
         copy('yakʔitʸutʸu');
-        copyyak.firstChild.data = "Copied!";
-        setTimeout(function(){ copyyak.firstChild.data = "yakʔitʸutʸu"; }, 1500);
+        eventA.firstChild.data = "Copied!";
+        setTimeout(function(){ eventA.firstChild.data = "yakʔitʸutʸu"; }, 1500);
     });
-    copyelewexe.addEventListener('click', function() {
+    eventB.addEventListener('click', function() {
         copy('elewexe');
-        copyelewexe.firstChild.data = "Copied!";
-        setTimeout(function(){ copyelewexe.firstChild.data = "elewexe"; }, 1500);
+        eventB.firstChild.data = "Copied!";
+        setTimeout(function(){ eventB.firstChild.data = "elewexe"; }, 1500);
     });
-    copynip.addEventListener('click', function() {
+    eventC.addEventListener('click', function() {
         copy('nipumūʔ');
-        copynip.firstChild.data = "Copied!";
-        setTimeout(function(){ copynip.firstChild.data = "nipumūʔ"; }, 1500);
+        eventC.firstChild.data = "Copied!";
+        setTimeout(function(){ eventC.firstChild.data = "nipumūʔ"; }, 1500);
     });
-    copyti.addEventListener('click', function() {
+    eventD.addEventListener('click', function() {
         copy('tiłhini');
-        copyti.firstChild.data = "Copied!";
-        setTimeout(function(){ copyti.firstChild.data = "tiłhini"; }, 1500);
+        eventD.firstChild.data = "Copied!";
+        setTimeout(function(){ eventD.firstChild.data = "tiłhini"; }, 1500);
     });
-    copyts.addEventListener('click', function() {
+    eventE.addEventListener('click', function() {
         copy('tsʰɨtqawɨ');
-        copyts.firstChild.data = "Copied!";
-        setTimeout(function(){ copyts.firstChild.data = "tsʰɨtqawɨ"; }, 1500);
+        eventE.firstChild.data = "Copied!";
+        setTimeout(function(){ eventE.firstChild.data = "tsʰɨtqawɨ"; }, 1500);
     });
-    copyt.addEventListener('click', function() {
+    eventF.addEventListener('click', function() {
         copy('tšɨłkukunɨtš');
-        copyt.firstChild.data = "Copied!";
-        setTimeout(function(){ copyt.firstChild.data = "tšɨłkukunɨtš"; }, 1500);
+        eventF.firstChild.data = "Copied!";
+        setTimeout(function(){ eventF.firstChild.data = "tšɨłkukunɨtš"; }, 1500);
     });
-    copytsp.addEventListener('click', function() {
+    eventG.addEventListener('click', function() {
         copy('tsɨpxatu');
-        copytsp.firstChild.data = "Copied!";
-        setTimeout(function(){ copytsp.firstChild.data = "tsɨpxatu"; }, 1500);
+        eventG.firstChild.data = "Copied!";
+        setTimeout(function(){ eventG.firstChild.data = "tsɨpxatu"; }, 1500);
     });
-    copytst.addEventListener('click', function() {
+    eventH.addEventListener('click', function() {
         copy('tsɨtkawayu');
-        copytst.firstChild.data = "Copied!";
-        setTimeout(function(){ copytst.firstChild.data = "tsɨtkawayu"; }, 1500);
+        eventH.firstChild.data = "Copied!";
+        setTimeout(function(){ eventH.firstChild.data = "tsɨtkawayu"; }, 1500);
+    });
+
+    playA.addEventListener('click', function() {
+        var myAudio = new Audio();
+        myAudio.src = ""
+        myAudio.play();
     });
 });
