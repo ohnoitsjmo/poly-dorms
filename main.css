@@ -1,17 +1,14 @@
-/* button {
-    z-index: 1;
-    text-align:center;
-} */
-
-.noselect {
-    z-index: -1;
-    position: relative;
-}
-
 h2 {
     color:#035642;
     font-family: "Avenir", sans-serif;
     text-align:center;
+}
+
+p {
+    text-align:center;
+    color:black;
+    margin: 0px 0px;
+    cursor: pointer;
 }
 
 html {
@@ -49,8 +46,6 @@ html {
     box-shadow: 0 0 0 0.2rem #03564280;
 }
 
-
-/* body {
-    width: 250px;
-    height: 500px;
-} */
+body {
+    padding-bottom:0px;
+}

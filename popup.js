@@ -80,6 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var playF = document.getElementById('play-f');
     var playG = document.getElementById('play-g');
     var playH = document.getElementById('play-h');
+    // Misc
+    var aboutLink = document.getElementById('about-link');
 
 
     eventA.addEventListener('click', function() {
@@ -163,4 +165,8 @@ document.addEventListener("DOMContentLoaded", function () {
         myAudio.src = "assets/h.mp3"
         myAudio.play();
     });
+
+    aboutLink.onclick = function() {
+        chrome.tabs.create({active: true, url: "https://github.com/ohnoitsjmo/polyDorms"})
+    }
 });

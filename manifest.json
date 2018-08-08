@@ -4,7 +4,6 @@
   "authors": ["Justin Mo", "Josiah Pang"],
   "description": "C/P CP dorm names.",
   "version": "1.0",
-  "default_locale": "en",
   "browser_action": {
    "default_icon": "icon.png",
    "default_popup": "popup.html"
