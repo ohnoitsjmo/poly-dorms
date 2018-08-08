@@ -62,6 +62,8 @@ document.addEventListener('dragstart', function (event) {
   
 //Add Event Listeners to Button Click
 document.addEventListener("DOMContentLoaded", function () {
+    var playArray = [0, 0, 0, 0, 0, 0, 0, 0];
+
     // Text
     var eventA = document.getElementById('copy-a');
     var eventB = document.getElementById('copy-b');
@@ -129,42 +131,66 @@ document.addEventListener("DOMContentLoaded", function () {
         var myAudio = new Audio();
         myAudio.src = "assets/a.mp3"
         myAudio.play();
+        playArray[0] = 1;
     });
     playB.addEventListener('click', function() {
         var myAudio = new Audio();
         myAudio.src = "assets/b.mp3"
         myAudio.play();
+        playArray[1] = 1;
     });
     playC.addEventListener('click', function() {
         var myAudio = new Audio();
         myAudio.src = "assets/c.mp3"
         myAudio.play();
+        playArray[2] = 1;
     });
     playD.addEventListener('click', function() {
         var myAudio = new Audio();
         myAudio.src = "assets/d.mp3"
         myAudio.play();
+        playArray[3] = 1;
     });
     playE.addEventListener('click', function() {
         var myAudio = new Audio();
         myAudio.src = "assets/e.mp3"
         myAudio.play();
+        playArray[4] = 1;
     });
     playF.addEventListener('click', function() {
         var myAudio = new Audio();
         myAudio.src = "assets/f.mp3"
         myAudio.play();
+        playArray[5] = 1;
     });
     playG.addEventListener('click', function() {
         var myAudio = new Audio();
         myAudio.src = "assets/g.mp3"
         myAudio.play();
+        playArray[6] = 1;
     });
     playH.addEventListener('click', function() {
         var myAudio = new Audio();
         myAudio.src = "assets/h.mp3"
         myAudio.play();
+        playArray[7] = 1;
+        for (var i=0; i<playArray.length; i++) {
+            if (playArray[i] == 0) {
+                return;
+            }
+        }
+        myAudio.src = "assets/meme.mp3"
+        myAudio.play();
+        playArray = [0, 0, 0, 0, 0, 0, 0, 0];
+        setTimeout(easterEgg(), 1000);
     });
+
+    function easterEgg() {
+        var sheet = document.createElement('style');
+        sheet.innerHTML = "#copy-a {background-color:red;}";
+        document.body.appendChild(sheet);
+        setTimeout(function(){ document.body.removeChild(sheet); }, 500);
+    }
 
     aboutLink.onclick = function() {
         chrome.tabs.create({active: true, url: "https://github.com/ohnoitsjmo/polyDorms"})
