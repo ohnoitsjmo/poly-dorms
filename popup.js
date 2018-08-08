@@ -55,6 +55,11 @@ function copyText(text) {
         });
 }
 
+document.addEventListener('dragstart', function (event) {
+    event.dataTransfer.setData('Text', event.target.innerHTML);
+  });
+
+  
 //Add Event Listeners to Button Click
 document.addEventListener("DOMContentLoaded", function () {
     // Text
