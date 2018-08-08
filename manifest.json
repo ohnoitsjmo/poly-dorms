@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "PolyDorms",
-  "authors": ["Justin Mo", "Josiah Pang"],
+  "author": ["Justin Mo", "Josiah Pang"],
   "description": "C/P CP dorm names.",
   "version": "1.0",
   "browser_action": {

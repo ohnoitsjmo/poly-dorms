@@ -182,14 +182,51 @@ document.addEventListener("DOMContentLoaded", function () {
         myAudio.src = "assets/meme.mp3"
         myAudio.play();
         playArray = [0, 0, 0, 0, 0, 0, 0, 0];
-        setTimeout(easterEgg(), 1000);
+        var sheet = document.createElement('style');
+        sheet.innerHTML = ".stars {display:block;}";
+        document.body.appendChild(sheet);
+        setTimeout(easterEgg, 600);
     });
 
     function easterEgg() {
         var sheet = document.createElement('style');
-        sheet.innerHTML = "#copy-a {background-color:red;}";
+        sheet.innerHTML = ".btn-primary {background-color:#b4a76c;}";
         document.body.appendChild(sheet);
         setTimeout(function(){ document.body.removeChild(sheet); }, 500);
+        setTimeout(easterEgg2, 900);
+    }
+
+    function easterEgg2() {
+        var sheet = document.createElement('style');
+        sheet.innerHTML = ".btn-primary {background-color:#b4a76c;}";
+        document.body.appendChild(sheet);
+        setTimeout(function(){ document.body.removeChild(sheet); }, 500);
+        setTimeout(easterEgg3, 900);
+    }
+
+    function easterEgg3() {
+        var sheet = document.createElement('style');
+        sheet.innerHTML = ".btn-primary {background-color:#b4a76c;}";
+        document.body.appendChild(sheet);
+        setTimeout(function(){ document.body.removeChild(sheet); }, 700);
+        setTimeout(easterEgg4, 900);
+    }
+
+    function easterEgg4() {
+        var sheet = document.createElement('style');
+        sheet.innerHTML = ".btn-primary {background-color:#b4a76c;}";
+        document.body.appendChild(sheet);
+        setTimeout(function(){ document.body.removeChild(sheet); }, 500);
+        setTimeout(easterEgg5, 900);
+    }
+
+    function easterEgg5() {
+        var sheet = document.createElement('style');
+        sheet.innerHTML = ".btn-primary {background-color:#b4a76c;}";
+        document.body.appendChild(sheet);
+        setTimeout(function(){ document.body.removeChild(sheet); }, 500);
+        var element = document.getElementById("stars");
+        element.classList.add("hidden");    
     }
 
     aboutLink.onclick = function() {
