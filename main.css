@@ -1,14 +1,11 @@
-button {
+/* button {
     z-index: 1;
-}
+    text-align:center;
+} */
 
 .noselect {
     z-index: -1;
     position: relative;
-}
-
-button {
-    text-align:center;
 }
 
 h1 {
@@ -19,3 +16,12 @@ h1 {
 html {
     text-align:center;
 }
+
+.btn-cp {
+    z-index:1000;
+}
+
+/* body {
+    width: 250px;
+    height: 500px;
+} */

@@ -44,8 +44,20 @@ function copy(text){
     document.execCommand("Copy", false, null);
 }
 
+function copyText(text) {
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            console.log('Text copied to clipboard');
+        })
+        .catch(err => {
+            // This can happen if the user denies clipboard permissions:
+            console.error('Could not copy text: ', err);
+        });
+}
+
 //Add Event Listeners to Button Click
 document.addEventListener("DOMContentLoaded", function () {
+    // Text
     var eventA = document.getElementById('copy-a');
     var eventB = document.getElementById('copy-b');
     var eventC = document.getElementById('copy-c');
@@ -54,53 +66,96 @@ document.addEventListener("DOMContentLoaded", function () {
     var eventF = document.getElementById('copy-f');
     var eventG = document.getElementById('copy-g');
     var eventH = document.getElementById('copy-h');
-
+    // Audio
     var playA = document.getElementById('play-a');
+    var playB = document.getElementById('play-b');
+    var playC = document.getElementById('play-c');
+    var playD = document.getElementById('play-d');
+    var playE = document.getElementById('play-e');
+    var playF = document.getElementById('play-f');
+    var playG = document.getElementById('play-g');
+    var playH = document.getElementById('play-h');
+
 
     eventA.addEventListener('click', function() {
-        copy('yakʔitʸutʸu');
+        copyText('yakʔitʸutʸu');
         eventA.firstChild.data = "Copied!";
         setTimeout(function(){ eventA.firstChild.data = "yakʔitʸutʸu"; }, 1500);
     });
     eventB.addEventListener('click', function() {
-        copy('elewexe');
+        copyText('elewexe');
         eventB.firstChild.data = "Copied!";
         setTimeout(function(){ eventB.firstChild.data = "elewexe"; }, 1500);
     });
     eventC.addEventListener('click', function() {
-        copy('nipumūʔ');
+        copyText('nipumūʔ');
         eventC.firstChild.data = "Copied!";
         setTimeout(function(){ eventC.firstChild.data = "nipumūʔ"; }, 1500);
     });
     eventD.addEventListener('click', function() {
-        copy('tiłhini');
+        copyText('tiłhini');
         eventD.firstChild.data = "Copied!";
         setTimeout(function(){ eventD.firstChild.data = "tiłhini"; }, 1500);
     });
     eventE.addEventListener('click', function() {
-        copy('tsʰɨtqawɨ');
+        copyText('tsʰɨtqawɨ');
         eventE.firstChild.data = "Copied!";
         setTimeout(function(){ eventE.firstChild.data = "tsʰɨtqawɨ"; }, 1500);
     });
     eventF.addEventListener('click', function() {
-        copy('tšɨłkukunɨtš');
+        copyText('tšɨłkukunɨtš');
         eventF.firstChild.data = "Copied!";
         setTimeout(function(){ eventF.firstChild.data = "tšɨłkukunɨtš"; }, 1500);
     });
     eventG.addEventListener('click', function() {
-        copy('tsɨpxatu');
+        copyText('tsɨpxatu');
         eventG.firstChild.data = "Copied!";
         setTimeout(function(){ eventG.firstChild.data = "tsɨpxatu"; }, 1500);
     });
     eventH.addEventListener('click', function() {
-        copy('tsɨtkawayu');
+        copyText('tsɨtkawayu');
         eventH.firstChild.data = "Copied!";
         setTimeout(function(){ eventH.firstChild.data = "tsɨtkawayu"; }, 1500);
     });
 
     playA.addEventListener('click', function() {
         var myAudio = new Audio();
-        myAudio.src = ""
+        myAudio.src = "assets/a.mp3"
+        myAudio.play();
+    });
+    playB.addEventListener('click', function() {
+        var myAudio = new Audio();
+        myAudio.src = "assets/b.mp3"
+        myAudio.play();
+    });
+    playC.addEventListener('click', function() {
+        var myAudio = new Audio();
+        myAudio.src = "assets/c.mp3"
+        myAudio.play();
+    });
+    playD.addEventListener('click', function() {
+        var myAudio = new Audio();
+        myAudio.src = "assets/d.mp3"
+        myAudio.play();
+    });
+    playE.addEventListener('click', function() {
+        var myAudio = new Audio();
+        myAudio.src = "assets/e.mp3"
+        myAudio.play();
+    });
+    playF.addEventListener('click', function() {
+        var myAudio = new Audio();
+        myAudio.src = "assets/f.mp3"
+        myAudio.play();
+    });
+    playG.addEventListener('click', function() {
+        var myAudio = new Audio();
+        myAudio.src = "assets/g.mp3"
+        myAudio.play();
+    });
+    playH.addEventListener('click', function() {
+        var myAudio = new Audio();
+        myAudio.src = "assets/h.mp3"
         myAudio.play();
     });
 });
