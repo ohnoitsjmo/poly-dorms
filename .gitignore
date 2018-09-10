@@ -1,2 +1,4 @@
 .DS_Store
-.DS_Store
+manifest.json
+package-lock.json
+package.json
