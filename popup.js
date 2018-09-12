@@ -9,9 +9,9 @@
  * B: elewexe
  * C: nipumūʔ
  * D: tiłhini
- * E: tsʰɨtqawɨ
+ * E: tsɨtqawɨ
  * F: tšɨłkukunɨtš
- * G: tsɨpxatu
+ * G: tsɨtpxatu
  * H: tsɨtkawayu
  */
 
@@ -79,9 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function(){ eventD.firstChild.data = "tiłhini"; }, 1500);
     });
     eventE.addEventListener('click', function() {
-        copyText('tsʰɨtqawɨ');
+        copyText('tsɨtqawɨ');
         eventE.firstChild.data = "Copied!";
-        setTimeout(function(){ eventE.firstChild.data = "tsʰɨtqawɨ"; }, 1500);
+        setTimeout(function(){ eventE.firstChild.data = "tsɨtqawɨ"; }, 1500);
     });
     eventF.addEventListener('click', function() {
         copyText('tšɨłkukunɨtš');
@@ -89,9 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function(){ eventF.firstChild.data = "tšɨłkukunɨtš"; }, 1500);
     });
     eventG.addEventListener('click', function() {
-        copyText('tsɨpxatu');
+        copyText('tsɨtpxatu');
         eventG.firstChild.data = "Copied!";
-        setTimeout(function(){ eventG.firstChild.data = "tsɨpxatu"; }, 1500);
+        setTimeout(function(){ eventG.firstChild.data = "tsɨtpxatu"; }, 1500);
     });
     eventH.addEventListener('click', function() {
         copyText('tsɨtkawayu');
