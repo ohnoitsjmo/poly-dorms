@@ -7,7 +7,7 @@
  * 
  * A: yakʔitʸutʸu
  * B: elewexe
- * C: nipumūʔ
+ * C: nipumuʔ
  * D: tiłhini
  * E: tsɨtqawɨ
  * F: tšɨłkukunɨtš
@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(function(){ eventB.firstChild.data = "elewexe"; }, 1500);
     });
     eventC.addEventListener('click', function() {
-        copyText('nipumūʔ');
+        copyText('nipumuʔ');
         eventC.firstChild.data = "Copied!";
-        setTimeout(function(){ eventC.firstChild.data = "nipumūʔ"; }, 1500);
+        setTimeout(function(){ eventC.firstChild.data = "nipumuʔ"; }, 1500);
     });
     eventD.addEventListener('click', function() {
         copyText('tiłhini');
